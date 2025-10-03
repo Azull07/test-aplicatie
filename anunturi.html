@@ -13,13 +13,34 @@
 
   <main style="padding:40px; text-align:center;">
     <h1>Anunțuri</h1>
-    <p>Aici vei găsi toate notificările și anunțurile recente.</p>
+
+    <ul id="lista-anunturi" style="list-style:none; padding:0; max-width:600px; margin:20px auto; text-align:left;">
+      <li>📌 Ședință generală pe 15 octombrie.</li>
+      <li>📌 Încep lucrările la acoperiș.</li>
+    </ul>
+
+    <form id="form-anunt" style="max-width:400px; margin:20px auto; text-align:left;">
+      <label>Adaugă un anunț:</label>
+      <input type="text" id="anunt-nou" required>
+      <button type="submit">Adaugă</button>
+    </form>
+
     <a href="index.html" class="btn">⬅ Înapoi la Acasă</a>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2025 Asociații Felix</p>
   </footer>
+
+  <script>
+    document.getElementById("form-anunt").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let text = document.getElementById("anunt-nou").value;
+      let li = document.createElement("li");
+      li.textContent = "📌 " + text;
+      document.getElementById("lista-anunturi").appendChild(li);
+      this.reset();
+    });
+  </script>
 </body>
 </html>
-
