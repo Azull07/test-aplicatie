@@ -13,13 +13,34 @@
 
   <main style="padding:40px; text-align:center;">
     <h1>Comunicare</h1>
-    <p>Aici vei putea trimite și primi mesaje importante de la asociație.</p>
+    <p>Trimite un mesaj către asociație.</p>
+
+    <form id="form-mesaj" style="max-width:400px; margin:20px auto; text-align:left;">
+      <label>Mesaj:</label>
+      <textarea id="mesaj" rows="4" required></textarea><br><br>
+      <button type="submit">Trimite</button>
+    </form>
+
+    <h2>Mesaje trimise</h2>
+    <ul id="lista-mesaje" style="list-style:none; padding:0; max-width:500px; margin:0 auto; text-align:left;">
+    </ul>
+
     <a href="index.html" class="btn">⬅ Înapoi la Acasă</a>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2025 Asociații Felix</p>
   </footer>
+
+  <script>
+    document.getElementById("form-mesaj").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let text = document.getElementById("mesaj").value;
+      let li = document.createElement("li");
+      li.textContent = text;
+      document.getElementById("lista-mesaje").appendChild(li);
+      this.reset();
+    });
+  </script>
 </body>
 </html>
-
