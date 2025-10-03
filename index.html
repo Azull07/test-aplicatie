@@ -2,15 +2,75 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Aplicația mea</title>
-  <!-- Legăm fișierul CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-bloc - Demo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Salut, asta e aplicația mea!</h1>
-  <button onclick="salut()">Apasă-mă</button>
 
-  <!-- Legăm fișierul JavaScript -->
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="Logo e-bloc"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Acasă</a></li>
+        <li><a href="#">Întreținere</a></li>
+        <li><a href="#">Documente</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bine ai venit la e-bloc</h1>
+      <p>Administrare simplă și eficientă pentru asociațiile de proprietari.</p>
+      <a href="#" class="btn">Începe acum</a>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <h2>Ce poți face cu e-bloc</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Plătești întreținerea online</h3>
+        <p>Acces rapid la facturi și plăți, direct din contul tău.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Index apă / gaz</h3>
+        <p>Introdu și urmărește indexul contoarelor tale lunar.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Acces la documente</h3>
+        <p>Vizualizează și descarcă regulamente, procese-verbale și anunțuri.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGIN SECTION -->
+  <section class="login-section">
+    <h2>Autentificare</h2>
+    <form class="login-form">
+      <label for="username">Utilizator</label>
+      <input type="text" id="username" placeholder="Introdu numele de utilizator">
+
+      <label for="password">Parola</label>
+      <input type="password" id="password" placeholder="Introdu parola">
+
+      <button type="button" onclick="login()">Login</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 E-bloc. Toate drepturile rezervate.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
