@@ -1,4 +1,4 @@
-// Funcție pentru butonul Login
+// Funcție Login
 function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -10,7 +10,7 @@ function login() {
     }
 }
 
-// Funcție pentru butonul "Începe acum"
+// Buton "Începe acum"
 const startBtn = document.querySelector(".hero .btn");
 if(startBtn) {
     startBtn.addEventListener("click", function(event) {
@@ -19,33 +19,11 @@ if(startBtn) {
     });
 }
 
-// Funcționalitate pentru dashboard cards
+// Dashboard cards interactiv
 const dashboardCards = document.querySelectorAll(".dashboard-card");
-
 dashboardCards.forEach(card => {
     card.addEventListener("click", () => {
         const title = card.querySelector("h3").innerText;
-        switch(title) {
-            case "Întreținere":
-                alert("Accesezi secțiunea Întreținere!");
-                break;
-            case "Index contoare":
-                alert("Accesezi secțiunea Index contoare!");
-                break;
-            case "Plată card":
-                alert("Accesezi secțiunea Plată card!");
-                break;
-            case "Comunicare":
-                alert("Accesezi secțiunea Comunicare!");
-                break;
-            case "Anunțuri":
-                alert("Accesezi secțiunea Anunțuri!");
-                break;
-            case "Documente":
-                alert("Accesezi secțiunea Documente!");
-                break;
-            default:
-                alert("Accesezi secțiunea " + title);
-        }
+        alert("Accesezi secțiunea " + title + "!");
     });
 });
