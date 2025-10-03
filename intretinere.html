@@ -12,13 +12,60 @@
   </header>
 
   <main style="padding:40px; text-align:center;">
-    <h1>Pagina Întreținere</h1>
-    <p>Aici vei putea vedea detaliile întreținerii și plățile.</p>
+    <h1>Întreținere</h1>
+    <p>Aici vezi lista facturilor tale și le poți plăti online.</p>
+
+    <!-- Tabel facturi -->
+    <table border="1" cellpadding="10" cellspacing="0" style="margin:20px auto; border-collapse:collapse; width:80%;">
+      <thead style="background:#003366; color:white;">
+        <tr>
+          <th>Luna</th>
+          <th>Suma</th>
+          <th>Status</th>
+          <th>Acțiune</th>
+        </tr>
+      </thead>
+      <tbody id="facturi-tbody">
+        <tr>
+          <td>Ianuarie 2025</td>
+          <td>250 RON</td>
+          <td class="status">Neplătită</td>
+          <td><button onclick="plateste(this)">Plătește acum</button></td>
+        </tr>
+        <tr>
+          <td>Februarie 2025</td>
+          <td>230 RON</td>
+          <td class="status">Neplătită</td>
+          <td><button onclick="plateste(this)">Plătește acum</button></td>
+        </tr>
+        <tr>
+          <td>Martie 2025</td>
+          <td>245 RON</td>
+          <td class="status">Plătită</td>
+          <td>✔</td>
+        </tr>
+      </tbody>
+    </table>
+
     <a href="index.html" class="btn">⬅ Înapoi la Acasă</a>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2025 Asociații Felix</p>
   </footer>
+
+  <script>
+    function plateste(button) {
+      let row = button.parentElement.parentElement;
+      let statusCell = row.querySelector(".status");
+
+      if (statusCell.innerText === "Neplătită") {
+        alert("Plata a fost efectuată cu succes!");
+        statusCell.innerText = "Plătită";
+        statusCell.style.color = "green";
+        button.parentElement.innerHTML = "✔";
+      }
+    }
+  </script>
 </body>
 </html>
