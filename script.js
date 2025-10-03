@@ -19,6 +19,6 @@ const startBtn = document.querySelector(".hero .btn");
 if(startBtn) {
     startBtn.addEventListener("click", function(event) {
         event.preventDefault(); // împiedică linkul să facă refresh
-        alert("Bine ai venit! Urmează să începi administrarea.");
+        alert("Bine ai venit la Asociații Felix! Urmează să începi administrarea.");
     });
 }
