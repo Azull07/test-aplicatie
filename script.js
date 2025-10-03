@@ -18,3 +18,34 @@ if(startBtn) {
         alert("Bine ai venit la Asociații Felix! Urmează să începi administrarea.");
     });
 }
+
+// Funcționalitate pentru dashboard cards
+const dashboardCards = document.querySelectorAll(".dashboard-card");
+
+dashboardCards.forEach(card => {
+    card.addEventListener("click", () => {
+        const title = card.querySelector("h3").innerText;
+        switch(title) {
+            case "Întreținere":
+                alert("Accesezi secțiunea Întreținere!");
+                break;
+            case "Index contoare":
+                alert("Accesezi secțiunea Index contoare!");
+                break;
+            case "Plată card":
+                alert("Accesezi secțiunea Plată card!");
+                break;
+            case "Comunicare":
+                alert("Accesezi secțiunea Comunicare!");
+                break;
+            case "Anunțuri":
+                alert("Accesezi secțiunea Anunțuri!");
+                break;
+            case "Documente":
+                alert("Accesezi secțiunea Documente!");
+                break;
+            default:
+                alert("Accesezi secțiunea " + title);
+        }
+    });
+});
